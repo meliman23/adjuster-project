@@ -106,3 +106,25 @@ function getMarkerIcon() {
         scale: 10,
     };
 }
+//Code for mialage 
+
+function calculateAnswer() {
+    // Get the input value
+    var inputValue = parseFloat(document.getElementById("inputValue").value);
+    
+    // Calculate the answer using the formula
+   var answer = inputValue * 2;
+   var minus = answer - 50;
+var pay = (answer - 50) * .625;
+
+
+
+   // Display the answer
+  if (pay < 0) {
+  document.getElementById("answer").innerHTML = "No miles for you.";
+  document.getElementById("formula").innerHTML = "nothing here to see";
+} else {
+  document.getElementById("answer").innerHTML = "Pay: $" + pay;
+  document.getElementById("formula").innerHTML = answer +"rt - 50 =" + minus +"@.625";
+}
+}
