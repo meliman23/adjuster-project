@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Api </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-center">
+            Meli Map
+        </div>
+    </nav>
+    <div class="grid-container">
+        <div class="left-content">
+            <input type="text" id="addressInput" placeholder="Enter an address">
+    <div id="cardContainer"></div>
+    <button onclick="addMarker()">Add Marker</button>
+        </div>
+        
+            <div class=" right-content">
+                <div id="map"></div>
+            </div>
+       
+    </div>
+    
+  <script src="script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8-J9zVyobaY-BIHd3VntaAxDiVlCmK48&callback=initMap" async defer></script>
+
+</body>
+</html>
