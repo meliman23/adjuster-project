@@ -9,38 +9,63 @@
 <body>
     <nav class="navbar">
         <div class="navbar-center">
-            Meli Map
+            Milage Calculator
         </div>
-    </nav>
-    <div class="grid-container">
-        <div class="left-content">
-            <input type="text" id="addressInput" placeholder="Enter an address">
-    <div id="cardContainer"></div>
-    <button onclick="addMarker()">Add Marker</button>
-        </div>
-        
-            <div class=" right-content">
-                <div id="map"></div>
-            </div>
-       
-    </div>
+ 
    
         <div class="container">
-          
+            <h1>Nextera</h1>
+
             <div class="box">
 
-             <label for="inputValue">Enter a
-              the miles away </label>
+            
+             <label for="inputValue">Enter
+              the miles</label>
              <input type="number"
               id="inputValue">
-             <button
-              onclick="calculateAnswer()">Calculate</button>
+
+              <label for="claimNumber">Enter Claim number </label>
+              <input type="number" id="claimNumber">
+
+             <button onclick="calculateAnswerNextera()">
+            Calculate</button>
              
             </div>
+
             <div class="answer">
+                <div id="claim"></div>
                 <div id="formula"></div>
                 <div id="answer"></div>
+                
             </div>
+        </div>
+        <div class="container">    
+            <h1>West Caost</h1>
+
+            <div class="box">
+
+              <label for="claimNumber2">Enter Claim number </label>
+              <input type="number" id="claimNumber2">
+   
+             <label for="inputValue2">Enter
+                the miles</label>
+               <input type="number"
+                id="inputValue2">
+
+             <button onclick="calculateAnswerWestCoast()">
+            Calculate</button>
+             
+            </div>
+
+            <div class="answer">
+                <div id="claim2"></div>
+                <div id="formula2"></div>
+                <div id="answer2"></div>
+                
+            </div>
+        </div>
+
+   
 
    
     
