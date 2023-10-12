@@ -11,21 +11,27 @@
         <div class="navbar-center">
             Milage Calculator
         </div>
+        </nav>
  
         <div class="centered-container">
+
             <div class="container centered-item">
             <h1>Nextera Calculator</h1>
 
             <div class="box">
 
+            <div class="label-input">
+                <label for="inputValue">Enter
+                    the miles</label>
+                   <input type="number"
+                    id="inputValue">
+            </div>
             
-             <label for="inputValue">Enter
-              the miles</label>
-             <input type="number"
-              id="inputValue">
-
-              <label for="claimNumber">Enter Claim number </label>
-              <input type="number" id="claimNumber">
+            <div class="label-input">
+                 <label for="claimNumber">Enter Claim number </label>
+                <input type="number" id="claimNumber">
+            </div>
+             
 
              <button onclick="calculateAnswerNextera()">
             Calculate</button>
@@ -39,30 +45,39 @@
                 
             </div>
             </div>
+
             <div class="container centered-item">    
             <h1>West Caost</h1>
 
             <div class="box">
 
-              <label for="claimNumber2">Enter Claim number </label>
-              <input type="number" id="claimNumber2">
-   
-             <label for="inputValue2">Enter
-                the miles</label>
-               <input type="number"
-                id="inputValue2">
-
-             <button onclick="calculateAnswerWestCoast()">
-            Calculate</button>
-             
-            </div>
-
-            <div class="answer">
-                <div id="claim2"></div>
-                <div id="formula2"></div>
-                <div id="answer2"></div>
+                <div class="label-input">
+                    <label for="inputValue2">Enter
+                        the miles</label>
+                       <input type="number"
+                        id="inputValue2">
+                </div>
                 
+                <div class="label-input">
+                     <label for="claimNumber2">Enter Claim number </label>
+                    <input type="number" id="claimNumber2">
+                </div>
+                 
+    
+                 <button onclick="calculateAnswerWestCoast()">
+                Calculate</button>
+                 
+                </div>
+    
+                <div class="answer">
+                    <div id="claim2"></div>
+                    <div id="formula2"></div>
+                    <div id="answer2"></div>
+                    
+                </div>
             </div>
+
+          
             </div>
     </div>
 
