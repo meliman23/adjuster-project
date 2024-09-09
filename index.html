@@ -3,47 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map Api </title>
+    <title>Adjuster tools</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="navbar-center">
-            Milage Calculator
+          Meli's Tool set 
         </div>
         </nav>
  
         <div class="centered-container">
 
-            <div class="container centered-item">
-            <h1>Nextera Calculator</h1>
-
-            <div class="box">
-
-            <div class="label-input">
-                <label for="inputValue">Enter
-                    the miles</label>
-                   <input type="number"
-                    id="inputValue">
-            </div>
+            <div class="container ">
+              <h2>Nextera Calculator </h2>
             
-            <div class="label-input">
-                 <label for="claimNumber">Enter Claim number </label>
-                <input type="text" id="claimNumber">
-            </div>
-             
+              <div class="box">
 
-             <button onclick="calculateAnswerNextera()">
-            Calculate</button>
-             
-            </div>
+                     <div class="label-input">
+                        <label for="inputValue">Enterthe miles</label>
+                        <input type="number"id="inputValue">
+                     </div>
+            
+                    <div class="label-input">
+                        <label for="claimNumber">Enter Claim number </label>
+                        <input type="text" id="claimNumber">
+                    </div>
+                    <button onclick="calculateAnswerNextera()">Calculate</button>
+              </div>
 
-            <div class="answer">
+              <div class="answer">
                 <div id="claim"></div>
                 <div id="formula"></div>
                 <div id="answer"></div>
                 
-            </div>
+              </div>
+
             </div>
 
             <div class="container centered-item">    
@@ -66,19 +61,26 @@
     
                  <button onclick="calculateAnswerWestCoast()">
                 Calculate</button>
+                <button id="copyButton2">Copy</button>
                  
                 </div>
     
-                <div class="answer">
+                <div id="outputText2" class="answer" >
+                    <div id="email"></div>
                     <div id="claim2"></div>
                     <div id="formula2"></div>
                     <div id="answer2"></div>
                     
                 </div>
             </div>
-
+            <div  class="container">
+                <input type="text" id="colorInput" placeholder="Enter the car">
+                <button id="repeatButton">Make Paragraph</button>
+                <button id="copyButton">Copy</button>
+              <p id="outputText" class="answer "></p>
+              </div>
           
-            </div>
+        </div>
     </div>
 
    
@@ -86,7 +88,6 @@
    
     
   <script src="script.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8-J9zVyobaY-BIHd3VntaAxDiVlCmK48&callback=initMap" async defer></script>
 
 </body>
 </html>
