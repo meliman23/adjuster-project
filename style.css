@@ -1,37 +1,39 @@
 :root {
-  --blue: rgb(4, 7, 86);
-   --secondBlue: #3498db;
-   --thirdBlue: #131934;
-  color: white;
+  --primary-blue: rgb(4, 7, 86);
+  --secondary-blue: #3498db;
+  --dark-blue: #131934;
+  --white: #ffffff;
+  --black: #000000;
+  --hover-blue: #2980b9;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
-  background-color: var(--blue);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: var(--primary-blue);
+  color: var(--white);
 }
-.label-input{
+
+/* Label and input styling */
+.label-input {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-bottom: 5px;
-  margin-left: 10px;
- 
+  margin: 5px 0 5px 10px;
 }
 
-
-/* Style for the navbar */
+/* Navbar */
 .navbar {
-  background-color: var(--secondBlue);
-  text-align: center;
+  background-color: var(--secondary-blue);
   font-size: 24px;
- size: 20px;
   padding: 10px 0;
   margin-bottom: 20px;
+  text-align: center;
+  color: var(--white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 40px;
 }
-
 
 /* Centered container for items */
 .centered-container {
@@ -39,102 +41,101 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ensure the container takes the full viewport height */
+  min-height: 100vh; /* Full viewport height */
 }
 
-/* Containers for your content */
+/* Containers for content */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--thirdBlue);
+  background-color: var(--dark-blue);
   padding: 20px;
   margin-top: 10px;
   gap: 10px;
   width: 50vw;
   border-radius: 15px;
-  border: solid var(--secondBlue) 2px;
+  border: 2px solid var(--secondary-blue);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Boxes inside containers */
+/* Content boxes inside containers */
 .box {
-  size: auto;
-  text-align: left;
-  background-color: var(--thirdBlue);
-  border: 2px solid var(--secondBlue);
+  background-color: var(--dark-blue);
+  border: 2px solid var(--secondary-blue);
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 5px;
+  color: var(--white);
 }
 
 /* Answer boxes */
 .answer {
-  color: #000;
+  color: var(--black);
   padding: 20px;
-  border-radius: 20px;
-  background-color: white;
+  background-color: var(--white);
   text-align: left;
   font-size: 18px;
-  border: 2px solid var(--secondBlue);
+  border-radius: 20px;
+  border: 2px solid var(--secondary-blue);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 
 /* Buttons */
 button {
   margin-top: 10px;
-  display: block;
   padding: 12px 24px;
   font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  background-color: #3498db;
-  color: #fff;
+  background-color: var(--secondary-blue);
+  color: var(--white);
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-  background-color: #2980b9;
-  transform: scale(1.3);
+  background-color: var(--hover-blue);
+  transform: scale(1.05); /* Subtle hover effect */
 }
 
+/* Smaller answer container */
 .answer3 {
   width: 20px;
-
 }
 
+/* Responsive styles */
 @media only screen and (max-width: 767px) {
-  body{
+  body {
     background-color: rgb(29, 3, 91);
   }
-  input{
+  
+  input {
     width: 50px;
   }
-  h1 {
-      font-size: 25px;
-  }
-  .container {
-      display: block;
-      background-color: #2980b9;
-      border-radius: 20px;
-      width: auto;
-      height: auto;
-      padding: 20px;
-  }
-  .box {
-      width: auto;
-      align-items: left;
-  }
-  .answer {
-      margin-top: 15px;
-      
-  }
-  .navbar {
-      text-align: center;
-  }
-  
-}
 
+  h1 {
+    font-size: 25px;
+  }
+
+  .container {
+    display: block;
+    background-color: var(--hover-blue);
+    border-radius: 20px;
+    width: auto;
+    padding: 20px;
+  }
+
+  .box {
+    width: auto;
+  }
+
+  .answer {
+    margin-top: 15px;
+  }
+
+  .navbar {
+    text-align: center;
+  }
+}
