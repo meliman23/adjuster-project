@@ -3,91 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adjuster tools</title>
+    <title>Adjuster Tools</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar-center">
-          Meli's Tool set 
+            Meli's Tool Set
         </div>
-        </nav>
- 
-        <div class="centered-container">
+    </nav>
 
-            <div class="container ">
-              <h2>Nextera Calculator </h2>
-            
-              <div class="box">
+    <!-- Main Container -->
+    <div class="centered-container">
 
-                     <div class="label-input">
-                        <label for="inputValue">Enterthe miles</label>
-                        <input type="number"id="inputValue">
-                     </div>
-            
-                    <div class="label-input">
-                        <label for="claimNumber">Enter Claim number </label>
-                        <input type="text" id="claimNumber">
-                    </div>
-                    <button onclick="calculateAnswerNextera()">Calculate</button>
-              </div>
+        <!-- Nextera Calculator -->
+        <div class="container">
+            <h2>Nextera Calculator</h2>
+            <div class="box">
+                <div class="label-input">
+                    <label for="inputValue">Enter the miles:</label>
+                    <input type="number" id="inputValue">
+                </div>
+                <div class="label-input">
+                    <label for="claimNumber">Enter Claim number:</label>
+                    <input type="text" id="claimNumber">
+                </div>
+                <button onclick="calculateAnswerNextera()">Calculate</button>
+            </div>
 
-              <div class="answer">
+            <div class="answer">
                 <div id="claim"></div>
                 <div id="formula"></div>
                 <div id="answer"></div>
-                
-              </div>
-
             </div>
+        </div>
 
-            <div class="container centered-item">    
-            <h1>West Caost</h1>
-
+        <!-- West Coast Calculator -->
+        <div class="container">
+            <h2>West Coast Calculator</h2>
             <div class="box">
-
                 <div class="label-input">
-                    <label for="inputValue2">Enter
-                        the miles</label>
-                       <input type="number"
-                        id="inputValue2">
+                    <label for="inputValue2">Enter the miles:</label>
+                    <input type="number" id="inputValue2">
                 </div>
-                
                 <div class="label-input">
-                     <label for="claimNumber2">Enter Claim number </label>
+                    <label for="claimNumber2">Enter Claim number:</label>
                     <input type="text" id="claimNumber2">
                 </div>
-                 
-    
-                 <button onclick="calculateAnswerWestCoast()">
-                Calculate</button>
+                <button onclick="calculateAnswerWestCoast()">Calculate</button>
                 <button id="copyButton2">Copy</button>
-                 
-                </div>
-    
-                <div id="outputText2" class="answer" >
-                    <div id="email"></div>
-                    <div id="claim2"></div>
-                    <div id="formula2"></div>
-                    <div id="answer2"></div>
-                    
-                </div>
             </div>
-            <div  class="container">
-                <input type="text" id="colorInput" placeholder="Enter the car">
-                <button id="repeatButton">Make Paragraph</button>
-                <button id="copyButton">Copy</button>
-              <p id="outputText" class="answer "></p>
-              </div>
-          
+
+            <div id="outputText2" class="answer">
+                <div id="email"></div>
+                <div id="claim2"></div>
+                <div id="formula2"></div>
+                <div id="answer2"></div>
+            </div>
         </div>
+
+        <!-- Generate Paragraph Section -->
+        <div class="container">
+            <h2>Generate Custom Paragraph</h2>
+            <div class="label-input">
+                <label for="colorInput">Enter the car:</label>
+                <input type="text" id="colorInput" placeholder="Enter the car">
+            </div>
+            <button id="repeatButton">Make Paragraph</button>
+            <button id="copyButton">Copy</button>
+            <p id="outputText" class="answer"></p>
+        </div>
+
     </div>
 
-   
-
-   
-    
-  <script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
