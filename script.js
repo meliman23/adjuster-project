@@ -1,94 +1,57 @@
-function calculateAnswerNextera() {
-    // Get the input value
-    var inputValue = parseFloat(document.getElementById("inputValue").value);
-    var claimnum = document.getElementById('claimNumber').value;
-    
-    // Calculate the answer using the formula
-    var miles = inputValue * 2;
-    var pay = (miles - 50) * 0.625;
-    var minus = miles - 50; // Store the value of miles - 50 in the 'minus' variable
-    
-    // Get the answer and formula elements
-    var answerElement = document.getElementById('answer');
-    var formulaElement = document.getElementById('formula');
-    var claimElement = document.getElementById('claim');
-    
-    // Display the answer
-    if (pay < 0) {
+
+
+function calculateAnswerWestCoast() {
+  // Get the input values
+  var inputValue2 = parseFloat(document.getElementById("inputValue2").value);
+  var claimnum = document.getElementById('claimNumber2').value;
+
+  // Calculate miles and pay
+  var miles = inputValue2 * 2;
+  var pay = (miles - 50) * 0.60;
+  var minus = miles - 50; // miles - 50
+
+  // Output elements
+  var answerElement = document.getElementById('answer2');
+  var formulaElement = document.getElementById('formula2');
+  var claimElement = document.getElementById('claim2');
+  var emailElement = document.getElementById('email');
+
+  if (pay < 0) {
       answerElement.textContent = "No miles for you.";
-      formulaElement.textContent = ""; // Clear the formula
-    } else {
-
-      claimElement.textContent =  "Claim number: " + claimnum;
-      formulaElement.textContent = miles + "rt - 50 = " + minus + " @ $.625"; // Fixed the formula display
-  
-      answerElement.textContent = "Pay: $" + pay.toFixed(2); // Use toFixed to round to 2 decimal places
-    }
+      formulaElement.textContent = "";
+  } else {
+      emailElement.textContent = "Hi, here is the mileage request:";
+      claimElement.textContent = "Claim number: " + claimnum;
+      formulaElement.textContent = `${miles} rt - 50 = ${minus} @ $0.60`;
+      answerElement.textContent = `Pay: $${pay.toFixed(2)}`;
   }
+}
 
-  function calculateAnswerWestCoast() {
-    // Get the input value
-    var inputValue2 = parseFloat(document.getElementById("inputValue2").value);
-    var claimnum = document.getElementById('claimNumber2').value;
-    
-    // Calculate the answer using the formula
-
-    var miles = inputValue2  * 2;
-    //west caost pays .60 a mile 
-    var pay = (miles - 50) * 0.60;
-    var minus = miles - 50; // Store the value of miles - 50 in the 'minus' variable
-    
-    // Get the answer and formula elements
-    var answerElement = document.getElementById('answer2');
-    var formulaElement = document.getElementById('formula2');
-    var claimElement = document.getElementById('claim2');
-    var email = document.getElementById('email')
-    // Display the answer
-    if (pay < 0) {
-      answerElement.textContent = "No miles for you.";
-      formulaElement.textContent = ""; // Clear the formula
-    } else {
-       email.textContent = "Hi, here is the mailage request:"
-      claimElement.textContent =  "Claim number: " + claimnum;
-      formulaElement.textContent = miles + "rt - 50 = " + minus + " @ $.60"; // Fixed the formula display
-  
-      answerElement.textContent = "Pay: $" + pay.toFixed(2); // Use toFixed to round to 2 decimal places
-    }
-  }
-  document.getElementById('repeatButton').addEventListener('click', function() {
-    // Get the value from the input field
-    var inputValue = document.getElementById('colorInput').value;
-
-    // Construct the output sentence
-    var outputSentence = 'Hi, my name is Meli McKinney. I am a vehicle appraiser. ' + 
-        'I was calling to set a time and place to inspect your ' + 
-        inputValue + '. Please give me a call back at your best convenience.';
-
-    // Display the output sentence in the <p> element
-    document.getElementById('outputText').textContent = outputSentence;
-});
-//Third copy button 
-document.getElementById('copyButton').addEventListener('click', function() {
-    // Get the text from the <p> element
-    var outputText = document.getElementById('outputText').textContent;
-
-    // Copy the text to the clipboard
-    navigator.clipboard.writeText(outputText).then(function() {
-        alert('Text copied to clipboard!');
-    }, function(err) {
-        alert('Failed to copy text: ', err);
-    });
+// Paragraph generator
+document.getElementById('repeatButton').addEventListener('click', function () {
+  var carModel = document.getElementById('colorInput').value;
+  var outputText = `Hi, my name is Meli McKinney. I am a vehicle appraiser. I was calling to set a time and place to inspect your ${carModel}. Please give me a call back at your best convenience.`;
+  document.getElementById('outputText').textContent = outputText;
 });
 
-//second copy button 
-document.getElementById('copyButton2').addEventListener('click', function() {
-  // Get the text from the <p> element
-  var outputText = document.getElementById('outputText2').textContent;
-
-  // Copy the text to the clipboard
-  navigator.clipboard.writeText(outputText).then(function() {
+// Copy to clipboard functionality
+function copyToClipboard(id) {
+  var textToCopy = document.getElementById(id).textContent;
+  navigator.clipboard.writeText(textToCopy).then(function () {
       alert('Text copied to clipboard!');
-  }, function(err) {
-      alert('Failed to copy text: ', err);
+  }, function (err) {
+      alert('Failed to copy text: ' + err);
   });
+}
+
+document.getElementById('copyButton').addEventListener('click', function () {
+  copyToClipboard('outputText');
 });
+
+document.getElementById('copyButton2').addEventListener('click', function () {
+  copyToClipboard('outputText2');
+});
+
+
+
+
