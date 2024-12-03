@@ -4,51 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-    Adjuster Tools 
-    </title>
+    <title>Adjuster Tools</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="navbar-center">
-                <h1>Auto Pro Solutions</h1>
-            </div>
-        </nav>
-        <div class="hero">
-            <div class="quoote">
-                <h1>Welcome Back!</h1> 
-               
-            </div> 
-            <img class="floating-image " src="meli.jpeg" alt="">
-    
-    
+        <div class="hero-text,  ">
+                <h1 class="float">Welcome Back!</h1>
+                <p>Your go-to platform for professional adjuster tools.</p>
         </div>
-    
-    </header>
-   
+        <img class="hero" src="./car-2.png" alt="">
+        
+     </header>
+
     <main>
-        <!-- West Coast Tool -->
-        <section class="centered-container">
-            <article class="container centered-item">
+        <section class="tools-section">
+            <!-- West Coast Tool -->
+            <article class="tool-card">
                 <h2>West Coast Mileage Calculator</h2>
                 <form id="westCoastForm">
-                    <div class="label-input">
+                    <div class="form-group">
                         <label for="inputValue2">Enter the miles:</label>
-                        <input type="number" id="inputValue2" required>
+                        <input type="number" id="inputValue2" placeholder="e.g., 120" required>
                     </div>
-
-                    <div class="label-input">
+                    <div class="form-group">
                         <label for="claimNumber2">Enter Claim Number:</label>
-                        <input type="text" id="claimNumber2" required>
+                        <input type="text" id="claimNumber2" placeholder="e.g., 12345-6789" required>
                     </div>
-
-                    <button type="button" onclick="calculateAnswerWestCoast()">Calculate</button>
-                    <button type="button" id="copyButton2">Copy</button>
+                    <div class="form-buttons">
+                        <button type="button" onclick="calculateAnswerWestCoast()">Calculate</button>
+                        <button type="button" id="copyButton2">Copy</button>
+                    </div>
                 </form>
-
                 <div id="outputText2" class="answer">
                     <p id="email"></p>
                     <p id="claim2"></p>
@@ -57,11 +46,13 @@
                 </div>
             </article>
 
-            <!-- Paragraph Generator Tool -->
-            <article class="container">
+            <!-- Call-back Script Generator -->
+            <article class="tool-card">
                 <h2>Call-back Script Generator</h2>
-                <div class="box">
+                <div class="form-group">
                     <input type="text" id="colorInput" placeholder="Enter the car model" required>
+                </div>
+                <div class="form-buttons">
                     <button type="button" id="repeatButton">Generate Paragraph</button>
                     <button type="button" id="copyButton">Copy</button>
                 </div>
