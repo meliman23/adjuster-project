@@ -6,11 +6,37 @@
     <title>Map Page</title>
 </head>
 <body>
-    <nav>
+   
+    <nav class="navbar">
+        <h1>Meli Map</h1>
         <a href="index.html">Home</a>
         <a href="map.html">Map</a>
-        <a href="milage.html">Milage
-            t</a>
+        <a href="milage.html">Milage</a>
     </nav>
+
+    <!-- Main Content Section -->
+    <div class="grid-container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <h2>Add a Marker</h2>
+            <input type="text" id="addressInput" placeholder="Enter an address">
+            <button onclick="addMarker()">Add Marker</button>
+            <div id="cardContainer" class="card-container"></div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <div id="map"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2cO4hlL_JXdHKQ7BgAfqpIU3-LKxCG8g&callback=initMap"
+        async defer></script>
+
 </body>
 </html>
+
+
+
+
