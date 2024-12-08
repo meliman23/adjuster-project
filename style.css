@@ -1,129 +1,112 @@
-:root{
-    --blue: rgb(4, 7, 86);
-    --second:rgba(135, 50, 197, 0.203);
-    --three:rgb(255, 255, 255);
-
+:root {
+  --blue: rgb(4, 7, 86);
+  --second: rgba(135, 50, 197, 0.203);
+  --three: rgb(255, 255, 255);
 }
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
-  
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
 }
 
 /* Style for the navbar */
 .navbar {
-    border-radius: 10px;
-    background-color: var(--blue); /* Replace with the desired light purple color */
-    text-align: center; /* Center-align text */
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
-    font-size: 24px; /* Adjust font size as needed */
-    color: white; /* Text color */
-    padding: 10px 0; /* Add some padding for spacing */
+  border-radius: 10px;
+  background-color: var(--blue); /* Replace with the desired light purple color */
+  text-align: center; /* Center-align text */
+  font-size: 24px; /* Adjust font size as needed */
+  color: white; /* Text color */
+  padding: 10px 0; /* Add some padding for spacing */
 }
-
 
 #map {
-    margin: 20px;
-    height: 500px; /* Set the desired map height */
-    /* Set the desired map width */
-    border-radius: 20px;
-    border: solid var(--blue) 10px ;
+  margin: 20px;
+  height: 500px; /* Set the desired map height */
+  border-radius: 20px;
+  border: solid var(--blue) 10px;
 }
 
-  /* CSS for the card container */
-  #cardContainer {
-    display: flex;
-    flex-wrap: wrap;
+/* CSS for the card container */
+#cardContainer {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-  /* CSS for individual cards */
-  .card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    background-color:var(--second);
+/* CSS for individual cards */
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  background-color: var(--second);
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 3fr; /* Two columns with equal width */
-    gap: 20px; /* Gap between the columns */
-    max-width: 1000px; /* Optional: Set a maximum width for the grid */
-    margin: 0 auto; /* Optional: Center the grid on the page */
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Two columns with equal width */
+  gap: 20px; /* Gap between the columns */
+  max-width: 1000px; /* Optional: Set a maximum width for the grid */
+  margin: 0 auto; /* Optional: Center the grid on the page */
 }
 
 .left-content {
- background-color: var(--second);
- border-radius: 20px;
- padding: 20px;
-
-
+  background-color: var(--second);
+  border-radius: 20px;
+  padding: 20px;
 }
 
 .right-content {
-     width: auto;
+  width: auto;
 }
 
-
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid 5px black; 
-    background-color: var(--blue);
-    padding: 20px;
-    margin-top: 20px;
-    gap: 10px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 5px black;
+  background-color: var(--blue);
+  padding: 20px;
+  margin-top: 20px;
+  gap: 10px;
 }
+
 .box {
-   
-    text-align: center;
-    width: 60%;
-    height: auto;
-    background-color: #ADD8E6; /* Blue color */
-    border: 5px solid #000; /* Solid black border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px;
-    }
+  text-align: center;
+  width: 60%;
+  height: auto;
+  background-color: #ADD8E6; /* Blue color */
+  border: 5px solid #000; /* Solid black border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+}
 
-.answer{
-    
-    width: 60%;
-    /* Set the width of the box */
+.answer {
+  width: 60%;
   padding: 20px; /* Add some padding inside the box */
   border-radius: 5px; /* Rounded corners */
- background-color: #ADD8E6;
-  /* Center text and style it */
+  background-color: #ADD8E6;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  
-
 }
 
 button {
-    margin-top: 10px;
-    display: inline-block;
-    padding: 12px 24px;
-   
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Add a smooth hover effect */
-  
-    /* Optional: Add a box shadow for depth */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  button:hover {
-    background-color: #2980b9; /* Change the background color on hover */
-    scale: .7;
-  }
-  
+  margin-top: 10px;
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth hover effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Add a box shadow for depth */
+}
+
+button:hover {
+  background-color: #2980b9; /* Change the background color on hover */
+  scale: .7;
+}
