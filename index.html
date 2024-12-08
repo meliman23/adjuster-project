@@ -9,36 +9,24 @@
 </head>
 
 <body>
-
     <!-- Navbar Section -->
     <nav class="navbar">
-        Meli Map
+        <h1>Meli Map</h1>
     </nav>
 
-    <!-- Grid Container -->
+    <!-- Main Content Section -->
     <div class="grid-container">
-        <div class="left-content">
-            <input type="text" id="addressInput" placeholder="Enter an address" />
-            <div id="cardContainer"></div>
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <h2>Add a Marker</h2>
+            <input type="text" id="addressInput" placeholder="Enter an address">
             <button onclick="addMarker()">Add Marker</button>
+            <div id="cardContainer" class="card-container"></div>
         </div>
 
-        <div class="right-content">
+        <!-- Right Panel -->
+        <div class="right-panel">
             <div id="map"></div>
-        </div>
-    </div>
-
-    <!-- Distance Calculator Section -->
-    <div class="container">
-        <div class="box">
-            <label for="inputValue">Enter the miles away</label>
-            <input type="number" id="inputValue" />
-            <button onclick="calculateAnswer()">Calculate</button>
-        </div>
-
-        <div class="answer">
-            <div id="formula"></div>
-            <div id="answer"></div>
         </div>
     </div>
 
