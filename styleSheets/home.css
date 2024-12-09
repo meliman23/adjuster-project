@@ -1,0 +1,133 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --text-light: #ffffff; /* Text for dark backgrounds */
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+/* Hero Section */
+
+
+.hero-content {
+    max-width: 700px;
+
+    margin: 0 auto;
+    
+}
+
+
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* Background Div */
+.background-div {
+    background-image: url('https://images.unsplash.com/photo-1519876217051-4449feb0b589?q=80&w=2612&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 66vh;
+    width: 100%;
+    color: var(--text-light);
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.background-div h1,
+.background-div p {
+    position: relative;
+    z-index: 2; /* Ensures text is above the overlay */
+    margin: 0;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--dark-color);
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 24px;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: var(--light-color);
+}
+
+.features h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: var(--dark-color);
+}
+
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: var(--text-light);
+    border: 1px solid var(--dark-color);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.feature-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--dark-color);
+    color: var(--text-light);
+    font-size: 14px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}

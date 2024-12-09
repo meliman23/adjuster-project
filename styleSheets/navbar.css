@@ -1,0 +1,27 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #afaab0, #496268);
+    padding: 10px 20px;
+    color: #496268;
+    height: 8vh;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #2ecc71; /* Secondary color */
+}
