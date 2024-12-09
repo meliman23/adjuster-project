@@ -1,5 +1,5 @@
 :root {
-  --blue: #24325F;
+  --primary-color: #3498db;
   --light-blue: #3498db;
   --light-gray: #f4f4f4;
   --white: #ffffff;
@@ -11,18 +11,10 @@ body {
   padding: 0;
   font-family: 'Arial', sans-serif;
   background-color: var(--light-gray);
-  color: var(--blue);
+  color: var(--primary-color);
 }
 
-/* Navbar Style */
-.navbar {
-  background-color: var(--blue);
-  color: var(--white);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 24px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+
 
 /* Grid Layout */
 .grid-container {
@@ -64,17 +56,8 @@ input[type="text"] {
   border: 1px solid #ddd;
 }
 
-button {
-  background-color: var(--light-blue);
-  color: var(--white);
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-button:hover {
-  background-color: #2980b9;
-}
+
 
 /* Card Container */
 .card-container {
