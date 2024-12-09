@@ -17,6 +17,49 @@
         <a href="map.html">map</a>
         <a href="milage.html">milage</a>
     </nav>
-   
+    <main>
+        <section class="tools-section">
+            <!-- West Coast Tool -->
+            <article class="tool-card">
+                <h2>West Coast Mileage Calculator</h2>
+                <form id="westCoastForm">
+                    <div class="form-group">
+                        <label for="inputValue2">Enter the miles:</label>
+                        <input type="number" id="inputValue2" placeholder="e.g., 120" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="claimNumber2">Enter Claim Number:</label>
+                        <input type="text" id="claimNumber2" placeholder="e.g., 12345-6789" required>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" onclick="calculateAnswerWestCoast()">Calculate</button>
+                        <button type="button" id="copyButton2">Copy</button>
+                    </div>
+                </form>
+                <div id="outputText2" class="answer">
+                    <p id="email"></p>
+                    <p id="claim2"></p>
+                    <p id="formula2"></p>
+                    <p id="answer2"></p>
+                </div>
+            </article>
+
+            <!-- Call-back Script Generator -->
+            <article class="tool-card">
+                <h2>Call-back Script Generator</h2>
+                <div class="form-group">
+                    <input type="text" id="colorInput" placeholder="Enter the car model" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" id="repeatButton">Generate Paragraph</button>
+                    <button type="button" id="copyButton">Copy</button>
+                </div>
+                <p id="outputText" class="answer"></p>
+            </article>
+        </section>
+    </main>
+
+    <script src="./jsFiles/milage.js"></script>
+
 </body>
 </html>
