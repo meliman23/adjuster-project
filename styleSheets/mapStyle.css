@@ -1,82 +1,103 @@
 :root {
-    --blue: #24325F;
-    --light-blue: #3498db;
-    --light-gray: #f4f4f4;
-    --white: #ffffff;
-  }
- 
-  
-  /* Navbar Style */
-  .navbar {
-    background-color: var(--blue);
-    color: var(--white);
-    text-align: center;
-    padding: 20px 0;
-    font-size: 24px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Grid Layout */
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .left-panel {
-    background-color: var(--white);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .left-panel h2 {
-    margin-top: 0;
-    font-size: 20px;
-  }
-  
-  .right-panel #map {
-    height: 600px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
+  --blue: #24325F;
+  --light-blue: #3498db;
+  --light-gray: #f4f4f4;
+  --white: #ffffff;
+}
 
-  
-  button:hover {
-    background-color: #2980b9;
-  }
-  
-  /* Card Container */
-  .card-container {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .card {
-    background-color: var(--light-blue);
-    color: var(--white);
-    padding: 12px;
-    border-radius: 6px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card button {
-    width: auto;
-    padding: 8px 12px;
-    font-size: 14px;
-    background-color: #e74c3c;
-  }
-  
-  .card button:hover {
-    background-color: #c0392b;
-  }
-  
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--light-gray);
+  color: var(--blue);
+}
+
+/* Navbar Style */
+.navbar {
+  background-color: var(--blue);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left-panel, .right-panel {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.right-panel #map {
+  height: 600px;
+  border-radius: 8px;
+}
+
+/* Input and Button Styling */
+input[type="text"], button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+input[type="text"] {
+  border: 1px solid #ddd;
+}
+
+button {
+  background-color: var(--light-blue);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Card Container */
+.card-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  background-color: var(--light-blue);
+  color: var(--white);
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card button {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #e74c3c;
+}
+
