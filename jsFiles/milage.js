@@ -64,32 +64,44 @@ function calculateAnswerCayman() {
   }
 }
 
-// ===== Paragraph Generator =====
-document.getElementById('repeatButton').addEventListener('click', function () {
-  const carModel = document.getElementById('colorInput').value;
-  const outputText = `Hi, my name is Meli McKinney. I am a vehicle appraiser. I was calling to set a time and place to inspect your ${carModel}. Please give me a call back at your best convenience.`;
-  document.getElementById('outputText').textContent = outputText;
-});
-
-// ===== Copy to Clipboard =====
+// This should come first
 function copyToClipboard(id) {
-  const textToCopy = document.getElementById(id).textContent;
+  const outputDiv = document.getElementById(id);
+  const paragraphs = outputDiv.getElementsByTagName("p");
+  let textToCopy = "";
+
+  for (let p of paragraphs) {
+    if (p.textContent.trim() !== "") {
+      textToCopy += p.textContent + "\n";
+    }
+  }
+
+  if (textToCopy === "") {
+    alert("Nothing to copy!");
+    return;
+  }
+
   navigator.clipboard.writeText(textToCopy).then(function () {
-      alert('Text copied to clipboard!');
+    alert("Text copied to clipboard!");
   }, function (err) {
-      alert('Failed to copy text: ' + err);
+    alert("Failed to copy text: " + err);
   });
 }
 
-// Copy buttons
-document.getElementById('copyButton').addEventListener('click', function () {
-  copyToClipboard('outputText');
-});
+// THEN your DOMContentLoaded code
+document.addEventListener('DOMContentLoaded', () => {
+  const copyButton2 = document.getElementById('copyButton2');
+  const copyButtonCayman = document.getElementById('copyButtonCayman');
 
-document.getElementById('copyButton2').addEventListener('click', function () {
-  copyToClipboard('outputText2');
-});
+  if (copyButton2) {
+    copyButton2.addEventListener('click', () => {
+      copyToClipboard('outputText2');
+    });
+  }
 
-document.getElementById('copyButtonCayman').addEventListener('click', function () {
-  copyToClipboard('outputTextCayman');
+  if (copyButtonCayman) {
+    copyButtonCayman.addEventListener('click', () => {
+      copyToClipboard('outputTextCayman');
+    });
+  }
 });

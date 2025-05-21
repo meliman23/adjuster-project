@@ -1,7 +1,6 @@
 :root {
     --background-color: #f9f9f9;
-    --primary-color: #1e90ff;
-    --secondary-color: #4caf50;
+    
     --text-color: #333;
     --heading-color: #222;
     --card-bg-color: #fff;
@@ -9,6 +8,13 @@
     --button-color: #007bff;
     --button-hover-color: #0056b3;
     --font-family: 'Roboto', sans-serif;
+
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --text-light: #ffffff; /* Text for dark backgrounds */
+    
   }
   
   body {
@@ -139,6 +145,15 @@
         transform: translateY(0);
     }
   }
+  /* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--dark-color);
+  color: var(--text-light);
+  font-size: 14px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
   
   /* Responsive Styles */
   @media (max-width: 768px) {
