@@ -1,103 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Milage Page</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mileage Calculator</title>
 
-    <link rel="stylesheet" href="styleSheets/navbar.css" />
-    <link rel="stylesheet" href="./styleSheets/milage.css" />
-    <link rel="stylesheet" href="styleSheets/button.css" />
-  </head>
-  <body>
-    <nav class="navbar">
-      <h1>Milage Calculator</h1>
-      <a href="index.html">Home</a>
-      <a href="./text.html">Txt</a>
-      <a href="milage.html">Milage</a>
-    </nav>
-    <main>
-      <section class="tools-section">
-        <!-- West Coast Tool -->
-        <article class="tool-card">
-          <h2>West Coast Mileage Calculator</h2>
-          <form id="westCoastForm">
-            <div class="form-group">
-              <label for="inputValue2">Enter the miles:</label>
-              <input
-                type="number"
-                id="inputValue2"
-                placeholder="e.g., 120"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="claimNumber2">Enter Claim Number:</label>
-              <input
-                type="text"
-                id="claimNumber2"
-                placeholder="e.g., 12345-6789"
-                required
-              />
-            </div>
-            <div class="form-buttons">
-              <button type="button" onclick="calculateAnswerWestCoast()">
-                Calculate
-              </button>
-              <button type="button" id="copyButton2">Copy</button>
-            </div>
-          </form>
-          <div id="outputText2" class="answer">
-            <p id="email"></p>
-            <p id="claim2"></p>
-            <p id="formula2"></p>
-            <p id="answer2"></p>
-          </div>
-        </article>
-        <!-- Cayman Tool -->
-        <article class="tool-card">
-          <h2>Cayman Mileage Calculator</h2>
-          <p>(the milage is .625)</p>
-          <form id="caymanForm">
-            <div class="form-group">
-              <label for="inputValueCayman">Enter the miles:</label>
-              <input
-                type="number"
-                id="inputValueCayman"
-                placeholder="e.g., 50"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="claimNumberCayman">Enter Claim Number:</label>
-              <input
-                type="text"
-                id="claimNumberCayman"
-                placeholder="e.g., 24680-13579"
-                required
-              />
-            </div>
-            <div class="form-buttons">
-              <button type="button" onclick="calculateAnswerCayman()">
-                Calculate
-              </button>
-              <button type="button" id="copyButtonCayman">Copy</button>
-            </div>
-          </form>
-          <div id="outputTextCayman" class="answer">
-            <p id="emailCayman"></p>
-            <p id="claimCayman"></p>
-            <p id="formulaCayman"></p>
-            <p id="answerCayman"></p>
-          </div>
-        </article>
-      </section>
-    </main>
-      <!-- Footer Section -->
-      <footer class="footer">
-        <p>&copy; 2024 Meli Map. All rights reserved.</p>
-    </footer>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet" />
 
-    <script src="./jsFiles/milage.js"></script>
-  </body>
+  <!-- Styles -->
+  <link rel="stylesheet" href="styleSheets/navbar.css" />
+  <link rel="stylesheet" href="styleSheets/milage.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <h1>Mileage Calculator</h1>
+    </div>
+    <div class="navbar-links">
+          <a class="btn" href="index.html">Home</a>
+      <a class="btn" href="cal.html">Cal Prompts</a>
+  
+      <a class="btn" href="text.html">Text Gen.</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Page introduction">
+      <h1>🧭 Calculate Your Mileage</h1>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools-section">
+      <!-- West Coast Tool -->
+      <article class="tool-card" aria-labelledby="west-coast-title">
+        <h2 id="west-coast-title">📍 West Coast</h2>
+        <form id="westCoastForm">
+          <div class="form-group">
+            <label for="inputValue2">Enter the miles:</label>
+            <input type="number" id="inputValue2" placeholder="e.g., 120" required />
+          </div>
+          <div class="form-group">
+            <label for="claimNumber2">Enter Claim Number:</label>
+            <input type="text" id="claimNumber2" placeholder="e.g., 12345-6789" required />
+          </div>
+          <div class="form-buttons">
+            <button type="button" onclick="calculateAnswerWestCoast()">Calculate</button>
+            <button type="button" id="copyButton2">Copy</button>
+          </div>
+        </form>
+        <div id="outputText2" class="answer">
+          <p id="email"></p>
+          <p id="claim2"></p>
+          <p id="formula2"></p>
+          <p id="answer2"></p>
+        </div>
+      </article>
+
+      <!-- Cayman Tool -->
+      <article class="tool-card" aria-labelledby="cayman-title">
+        <h2 id="cayman-title">📍 Cayman (Rate: 0.625)</h2>
+        <form id="caymanForm">
+          <div class="form-group">
+            <label for="inputValueCayman">Enter the miles:</label>
+            <input type="number" id="inputValueCayman" placeholder="e.g., 50" required />
+          </div>
+          <div class="form-group">
+            <label for="claimNumberCayman">Enter Claim Number:</label>
+            <input type="text" id="claimNumberCayman" placeholder="e.g., 24680-13579" required />
+          </div>
+          <div class="form-buttons">
+            <button type="button" onclick="calculateAnswerCayman()">Calculate</button>
+            <button type="button" id="copyButtonCayman">Copy</button>
+          </div>
+        </form>
+        <div id="outputTextCayman" class="answer">
+          <p id="emailCayman"></p>
+          <p id="claimCayman"></p>
+          <p id="formulaCayman"></p>
+          <p id="answerCayman"></p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>🌸 &copy; 2024 Meli Map. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="./jsFiles/milage.js"></script>
+</body>
 </html>

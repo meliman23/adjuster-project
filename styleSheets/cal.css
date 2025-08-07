@@ -1,0 +1,62 @@
+:root {
+  --primary-color: #8017f1;       /* pastel lavender */
+  --secondary-color: #dab3ff;     /* soft blush */
+  --accent-color: #8b7491;        /* pastel cyan */
+  --dark-color: #1e1e2f;          /* near-black */
+  --light-color: #110b18;         /* lavender-tinted black */
+  --text-light: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--dark-color);
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 4vh 0;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #fff0ff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px #d6b3ff, 0 0 16px #b260ff;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #eacbff;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 4px #ae82f0;
+}
+
+.prompt-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.25rem;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem auto;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #f9f9ff;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 24px rgba(230, 200, 255, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.prompt-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 28px rgba(255, 230, 255, 0.35);
+}
+
+strong {
+  color: #ffd8fe;
+  font-weight: 700;
+}
